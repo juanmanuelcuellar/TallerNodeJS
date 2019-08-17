@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="bower_components/boostrap/dist/css/bootstrap.min.css")
+        title Document
+    body
+        form(action="ejercicioNueve_cantTextBox" method="POST")
+            input(type="number" name="cantTextoBox")
+            input(class="btn btn-danger" type="submit", value="Generar")
+        
+        form(action="ejercicioNueve_numeros" method="POST")
+            if cantTextBox > 0
+                - for(var i = 1; i <= cantTextBox; i++) {
+                h2= "numero" + " " + i
+                input(type="number" name="num")
+                - }
+                input(class="btn btn-danger" type="submit", value="Generar")
+            else
+                h2 digite un numero valido
+            h2 Numeros: #{numeros}
+            h2 Pares: #{cantPares}
+            h2 Impares: #{cantImpares}
+            h2 Suma Pares: #{sumaPares}
+            h2 Suma Impares: #{sumaImpares}
