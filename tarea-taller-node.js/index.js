@@ -28,6 +28,8 @@ app.use(require('./controller/ejercicio7'));
 app.use(require('./controller/ejercicio8'));
 app.use(require('./controller/ejercicio9'));
 
+app.use(require('./controller/menu'));
+
 // escuchando el puerto
 
 app.listen(3000, () =>{
